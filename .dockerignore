@@ -1,0 +1,17 @@
+.git
+node_modules
+.output
+.nitro
+.wrangler
+.tanstack
+.env
+.env.*
+**/.env
+**/.env.*
+gator/.env
+gator/.env.*
+backups
+data
+work
+outputs
+*.log

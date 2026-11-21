@@ -1,0 +1,26 @@
+name: Validate gateway
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.23.2
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm --prefix gator run check
+      - run: npm --prefix gator test
+      - run: docker build -f deploy/Dockerfile.api -t gateway-api-check .
+      - run: docker run --rm --read-only --cap-drop ALL --security-opt no-new-privileges:true --tmpfs /tmp:size=16m gateway-api-check caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
+      - run: npm run build
+      - run: npm run build:parent
+      - run: node scripts/smoke-parent.mjs

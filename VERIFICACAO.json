@@ -1,0 +1,159 @@
+{
+  "project": "01-noticias-ia",
+  "verifiedAt": "2026-11-02T17:14:59.812095+00:00",
+  "commands": {
+    "npm-ci": {
+      "exitCode": 0,
+      "log": "verificacao/npm-ci.log"
+    },
+    "test": {
+      "exitCode": 0,
+      "log": "verificacao/test.log"
+    },
+    "news-tests": {
+      "exitCode": 0,
+      "log": "verificacao/news-tests.log"
+    },
+    "typecheck": {
+      "exitCode": 0,
+      "log": "verificacao/typecheck.log"
+    },
+    "build": {
+      "exitCode": 0,
+      "log": "verificacao/build.log"
+    },
+    "lint": {
+      "exitCode": 0,
+      "log": "verificacao/lint.log"
+    }
+  },
+  "protectedFiles": {
+    "src/server.ts": {
+      "before": "2d0e091d7d00fa1dd238bb2282a4ab1938cc4482372f2d10d8195f39cc268813",
+      "after": "2d0e091d7d00fa1dd238bb2282a4ab1938cc4482372f2d10d8195f39cc268813",
+      "unchanged": true
+    },
+    "src/lib/child-config.server.ts": {
+      "before": "45c7c15afe32d564dbf8d72af0a0494c414b6c21c01ed381045c1314a2325a4d",
+      "after": "45c7c15afe32d564dbf8d72af0a0494c414b6c21c01ed381045c1314a2325a4d",
+      "unchanged": true
+    },
+    "src/lib/child-handshake.server.ts": {
+      "before": "f4b7a35d14605312a9c35293fe1cb203def46a999745f5c407641e5eac028a65",
+      "after": "f4b7a35d14605312a9c35293fe1cb203def46a999745f5c407641e5eac028a65",
+      "unchanged": true
+    },
+    "src/lib/central-address.ts": {
+      "before": "54a83a12040ab716c96524e7c23f36941cf383f8677c1531a6e75c84e2b10225",
+      "after": "54a83a12040ab716c96524e7c23f36941cf383f8677c1531a6e75c84e2b10225",
+      "unchanged": true
+    },
+    "src/routes/__root.tsx": {
+      "before": "f1a9df3a7ccc1ecb105bdb2e037e7cc81dc26afa52bdc8b31b85a5e09a32d4c7",
+      "after": "f1a9df3a7ccc1ecb105bdb2e037e7cc81dc26afa52bdc8b31b85a5e09a32d4c7",
+      "unchanged": true
+    },
+    "src/routes/api/public/v1/workers/announce.ts": {
+      "before": "fee4e8aae7cd050d4feb43661871f7b18667c256cafee3a8b03b98200d0cb8ee",
+      "after": "fee4e8aae7cd050d4feb43661871f7b18667c256cafee3a8b03b98200d0cb8ee",
+      "unchanged": true
+    }
+  },
+  "tdd": {
+    "red": "Missing server-side RSS adapter; Missing bounded cached feed service; Missing news portal; Missing client filtering",
+    "greenLog": "verificacao/news-tests.log"
+  },
+  "gatewayLiveRegistrationTested": false,
+  "notes": [
+    "Unused inherited src/integrations/supabase scaffold and supabase/config.toml removed after confirming no outside imports; resolves missing dependency typecheck and legacy scope assertion.",
+    "npm ci reports 14 moderate dependency vulnerabilities; no force upgrade applied."
+  ],
+  "smoke": {
+    "homeStatus": 200,
+    "apiStatus": 200,
+    "itemCount": 60,
+    "cacheVerified": true,
+    "openProxyRejected": 400,
+    "feedUrl": "https://news.google.com/rss/search?q=intelig%C3%AAncia%20artificial%20when%3A7d&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+    "updatedAt": "2026-11-02T17:16:54.553Z",
+    "firstItem": {
+      "title": "Olimpíada de inteligência artificial reúne participantes de cinco unidades da federação",
+      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOS2lvaWlZSTBBZHZ5UDZkY0ZpMnB4SWZ3Y0JnS2dXOXA3cXVycjRNdEFDSUtWc0JyVUREVDdPeXB2YWZoem9NdFZWNnh3bF9fOERPWXdmQ19GczNOdzlrdHItWDJIV0xaaEJqaC1PWU5TVUtZbzE3TDM5VDQta195clZSRjY0SkM0dDJGeHlkWmF4V1BaWUN5R2llS1p5dFFFTlVzVGtaOEUyX0ZSYTExVFZUa2x5dGJOY3NfZmdiMnI0aVhibHZXZWpIOGdMY2FzTFhDaXFUQ1h4T3RxS2N6Q0ZiYXd3SzhjSEwyUFRXSjB2aThFNHFyUzk1SdIB-wFBVV95cUxOS2lvaWlZSTBBZHZ5UDZkY0ZpMnB4SWZ3Y0JnS2dXOXA3cXVycjRNdEFDSUtWc0JyVUREVDdPeXB2YWZoem9NdFZWNnh3bF9fOERPWXdmQ19GczNOdzlrdHItWDJIV0xaaEJqaC1PWU5TVUtZbzE3TDM5VDQta195clZSRjY0SkM0dDJGeHlkWmF4V1BaWUN5R2llS1p5dFFFTlVzVGtaOEUyX0ZSYTExVFZUa2x5dGJOY3NfZmdiMnI0aVhibHZXZWpIOGdMY2FzTFhDaXFUQ1h4T3RxS2N6Q0ZiYXd3SzhjSEwyUFRXSjB2aThFNHFyUzk1SQ?oc=5",
+      "source": "G1",
+      "publishedAt": "2026-11-02T14:13:32.000Z"
+    },
+    "sources": [
+      "G1",
+      "CBN Ribeirão",
+      "UOL",
+      "Prefeitura de Campo Grande",
+      "IT Forum",
+      "Vero Notícias",
+      "Estadão",
+      "O GLOBO",
+      "CQCS",
+      "Corpo de Bombeiros Militar do Maranhão",
+      "Fast Company Brasil",
+      "CartaCapital",
+      "VEJA",
+      "LANCE!",
+      "CNN Brasil",
+      "ArteQueAcontece",
+      "Sesc Paraná",
+      "Serasa Experian",
+      "Cidade Conecta",
+      "Money Times",
+      "Click Guarulhos",
+      "conexaoes.com.br",
+      "Agência Brasil",
+      "Você RH",
+      "Globo",
+      "Exame",
+      "Portal da Câmara dos Deputados",
+      "InfoMoney",
+      "Gazeta do Povo",
+      "UNIPAR",
+      "SEGS Portal Nacional",
+      "Valor Econômico",
+      "Tribunal de Justiça de Santa Catarina",
+      "Portal PUC-Campinas",
+      "OAB/SC",
+      "AutoData Editora",
+      "Proifes",
+      "MundoGEO",
+      "GOV.BR",
+      "Portal Vida e Família",
+      "SITEPD",
+      "Fenati",
+      "Uniube",
+      "Associação Comercial de Campinas",
+      "Movimento Econômico",
+      "UVESP",
+      "ConvergenciaDigital"
+    ],
+    "response": "verificacao/news-response.json"
+  },
+  "browser": {
+    "status": "passed",
+    "engine": "Microsoft Edge headless / Playwright",
+    "renderedItems": 60,
+    "sourceFilter": true,
+    "searchEmptyState": true,
+    "manualRefresh": true,
+    "mobileOverflow": false,
+    "pageErrors": [],
+    "title": "Observatório IA — notícias recentes",
+    "screenshots": [
+      "verificacao/desktop.png",
+      "verificacao/mobile.png"
+    ],
+    "announceIntercepted": true
+  },
+  "testCounts": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "verifiedAllAcceptanceChecks": true,
+  "localServerStopped": true
+}
